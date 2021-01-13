@@ -1,5 +1,6 @@
 import React from 'react';
-import './App.css';
+import '../App.css';
+import SearchField from '../SearchField/SearchField';
 
 class App extends React.Component {
   constructor(){
@@ -12,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-
+     <SearchField />
       </div>
     );
   }
