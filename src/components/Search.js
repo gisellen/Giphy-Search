@@ -12,12 +12,14 @@ class Search extends React.Component {
     };
   }
 
+  //check if search component update
     componentDidUpdate(prevProps, prevState){
       if (prevProps.gif !== this.props.gif) {
           this.componentDidMount();
         }
   }
 
+  //check search component
   componentDidMount() {
     this.setState({
       isLoaded: false,
@@ -28,7 +30,7 @@ class Search extends React.Component {
         if (response.status !== 200) {
           throw new Error("No Result");
         }
-        return  response.json();
+        return response.json();
       })
       .then((result) => {
         this.setState({
