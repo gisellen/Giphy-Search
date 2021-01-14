@@ -1,21 +1,21 @@
-import React from 'react';
-import './App.css';
+import React, { Component } from 'react'
+import SearchField from './SearchField';
 
-class App extends React.Component {
-  constructor(){
-    super();
+export default class App extends Component {
+  constructor(props){
+    super(props);
     this.state = {
-
+      value: '',
     }
   }
-
   render() {
     return (
-      <div className="App">
-
+      
+    <div className="App">
+  <div className="container"></div>
+  <h1> Giphy Search </h1>
+        <SearchField />
       </div>
-    );
+    )
   }
 }
-
-export default App;
