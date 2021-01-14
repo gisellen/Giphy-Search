@@ -1,55 +1,40 @@
-import React, { Component } from 'react';
-import '../App.css';
+import React, { Component } from "react";
+import Search from './Search'
+import "../App.css";
 
-class SearchField extends React.Component{
+class SearchField extends React.Component {
+  constructor() {
+    super();
 
-constructor()
-{
+    this.state = {
+      search: "",
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-super();
-
-this.state = {
-
-    search: "",
-    isCkecked: false
-
-};
-this.handleChange = this.handleChange.bind(this);
-
-}
-
-handleChange(event) {
-    
+  handleChange(event) {
     const value = event.target.value;
     this.setState({
-      [event.target.name]: value
-      
+      search: value,
     });
   }
 
-  
-
-render()
-{
-    
-        return (
-          <form>
-            <br />
-            <h1> Giphy Search</h1>
-            {/* 1 */}
-            <input
-              type="text"
-              name="search"
-              placeholder="Gift Search"
-              onChange={this.handleChange}
-            />
-           
-           
-          </form>
-        );
-      }
-    }
-    
-
+  render() {
+    return (
+      <div>
+      <form>
+        <br />
+        <input
+          type="text"
+          name="search"
+          placeholder="Gif Search"
+          onChange={this.handleChange}
+        />
+      </form>
+      <Search gif={this.state.search} />
+      </div>
+    );
+  }
+}
 
 export default SearchField;
