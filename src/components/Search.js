@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchField from "./SearchField";
-import GifCard from "./GifCard";
+import gifCard from "./gifCard";
 
 class Search extends React.Component {
   constructor(props) {
@@ -63,7 +63,7 @@ class Search extends React.Component {
       return (
         <div className="gif-container">
               {gif.map((gif)=>(
-                  <GifCard url={gif.images.original.url}/>
+                  <gifCard url={gif.images.original.url}/>
               ))}
         </div>
       );
