@@ -18,6 +18,7 @@ body{
   color: #ffffff;
 }
 
+
 .App{
   font-size: 1rem;
   font-size: max(16px, 1em);
@@ -40,3 +41,18 @@ body{
   flex-direction: column;
   margin-top: 50px;
 }
+
+
+.gif-container{
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+form {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
