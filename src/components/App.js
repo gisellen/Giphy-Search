@@ -10,7 +10,10 @@ export default class App extends Component {
   }
   render() {
     return (
-      <div>
+      
+    <div className="App">
+  <div className="container"></div>
+  <h1> Giphy Search </h1>
         <SearchField />
       </div>
     )
