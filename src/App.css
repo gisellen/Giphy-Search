@@ -19,6 +19,30 @@ body{
 }
 
 
+.App{
+  font-size: 1rem;
+  font-size: max(16px, 1em);
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  color: black;
+}
+
+
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+
 .gif-container{
   display: flex;
   padding: 30px;
@@ -31,3 +55,4 @@ form {
   justify-content: center;
   padding: 10px;
 }
+
