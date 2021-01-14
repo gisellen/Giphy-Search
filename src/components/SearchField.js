@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Search from './Search'
-import SearchTwo from './SearchTwo'
 import "../App.css";
 import GifCard from "./GifCard";
 
@@ -11,8 +10,12 @@ class SearchField extends React.Component {
       search: "",
       gif: [],
       error: null,
+      rand: false,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+    this.handleTrend = this.handleTrend.bind(this)
+    this.handleRandom = this.handleRandom.bind(this)
   }
 
   handleChange(event) {
@@ -31,9 +34,10 @@ class SearchField extends React.Component {
         return response.json();
     })
     .then((result) => {
-        console.log(result.data)
+        console.log(result)
         this.setState({
             gif: [],
+            rand: true,
         })
         if(result.length !== 0){
             this.setState({
@@ -59,13 +63,14 @@ class SearchField extends React.Component {
         return response.json();
     })
     .then((result) => {
-        console.log(result.data)
         this.setState({
             gif: [],
+            rand: false,
         })
         if(result.length !== 0){
             this.setState({
                 gif: result.data,
+                rand: false,
             })
         }
         console.log(this.state.gif)
@@ -79,12 +84,40 @@ class SearchField extends React.Component {
     })
   }
 
+  onSubmit(){
+    fetch("http://api.giphy.com/v1/gifs/search?q=" + `${this.state.search}` + "&api_key=hNr7dizMwEhAZbcrICxMPPESXDlciYAl")
+    .then((response) => {
+      if (response.status !== 200) {
+        throw new Error("No Result");
+      }
+      return response.json();
+    })
+    .then((result) => {
+      this.setState({
+        gif: [],
+        rand: false,
+      });
+      if (result.length !== 0) {
+        this.setState({
+          gif: result.data,
+          rand: false,
+        });
+        console.log(this.state.gif)
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      this.setState({
+        error,
+        gif: [],
+      });
+    });
+  }
+
   render() {
-    const {gif} = this.state.gif
     return (
-      <div>
+      <div className="buttons">
       <form>
-        <br />
         <input
           type="text"
           name="search"
@@ -92,10 +125,10 @@ class SearchField extends React.Component {
           onChange={this.handleChange}
         />
       </form>
-      {/* <button className="trend-button" onClick={() => console.log(this.state.search)}>Submit</button><br /> */}
+      <button className="trend-button" onClick={this.onSubmit}>Submit</button><br />
       <button className="trend-button" onClick={this.handleTrend}>Trending</button>
       <button className="random-button" onClick={this.handleRandom}>Random</button>
-      <Search gif={this.state.search} />
+      <Search gif={this.state.gif} error={this.state.error} rand={this.state.rand} />
       </div>
     );
   }

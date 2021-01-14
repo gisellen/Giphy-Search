@@ -14,7 +14,7 @@ export default class App extends Component {
     <div className="App">
   <div className="container"></div>
 
-  <img src="giphy.gif" width= "300px" height= "350px"/>
+  <img src="giphy.gif"/>
 
   <h1> Giphy Search </h1>
         <SearchField />
