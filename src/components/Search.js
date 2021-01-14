@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SearchField from "./SearchField";
+import GifCard from "./GifCard";
 
 class Search extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Search extends React.Component {
         if (response.status !== 200) {
           throw new Error("No Result");
         }
-        return response.json();
+        return  response.json();
       })
       .then((result) => {
         this.setState({
@@ -39,7 +40,7 @@ class Search extends React.Component {
             isLoaded: true,
             gif: result.data,
           });
-          // console.log(this.state.gif)
+          console.log(this.state.gif)
         }
       })
       .catch((error) => {
@@ -60,9 +61,9 @@ class Search extends React.Component {
       return <h2>Loading...</h2>
     } else{
       return (
-        <div>
+        <div className="gif-container">
               {gif.map((gif)=>(
-                <img src={gif.images.original.url} />
+                  <GifCard url={gif.images.original.url}/>
               ))}
         </div>
       );

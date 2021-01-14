@@ -17,3 +17,17 @@ body{
   /* background-color: #202020; */
   color: #ffffff;
 }
+
+
+.gif-container{
+  display: flex;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+form {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
