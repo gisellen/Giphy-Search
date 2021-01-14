@@ -14,7 +14,7 @@ body{
   margin-top: 50px;
   margin: 0;
   padding: 0;
- background-color: #c2540b;
+ background-color: #0f0701;
   color: #ffffff;
 }
 
@@ -28,7 +28,7 @@ body{
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
-  color: black;
+  color: rgb(248, 236, 236);
 }
 
 
