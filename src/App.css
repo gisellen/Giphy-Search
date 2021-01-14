@@ -14,11 +14,16 @@ body{
   margin-top: 50px;
   margin: 0;
   padding: 0;
-  /* background-color: #202020; */
+ background-color:#90d4dd;
   color: #ffffff;
 }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> c8f3b69dfed1c0f8a4d5faf2c52e315f220aca70
 .App{
   font-size: 1rem;
   font-size: max(16px, 1em);
@@ -28,7 +33,7 @@ body{
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
-  color: black;
+  color: rgb(41, 36, 36);
 }
 
 
@@ -49,6 +54,7 @@ body{
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 form {
   display:flex;
   align-items: center;
@@ -56,3 +62,25 @@ form {
   padding: 10px;
 }
 
+=======
+.buttons {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+button{
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+>>>>>>> c8f3b69dfed1c0f8a4d5faf2c52e315f220aca70
