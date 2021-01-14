@@ -14,9 +14,11 @@ body{
   margin-top: 50px;
   margin: 0;
   padding: 0;
-  /* background-color: #202020; */
+ background-color:#90d4dd;
   color: #ffffff;
 }
+
+
 
 
 .App{
@@ -28,7 +30,7 @@ body{
   align-items: center;
   flex-direction: column;
   margin-top: 50px;
-  color: black;
+  color: rgb(41, 36, 36);
 }
 
 
