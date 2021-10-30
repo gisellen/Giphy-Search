@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import SearchField from "./SearchField";
-import GifCard from "./GifCard";
+import GifCard from "./gifCard";
 
 class Search extends React.Component {
   constructor(props) {
