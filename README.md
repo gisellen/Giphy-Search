@@ -19,8 +19,3 @@ to start a localhost.
 - Node.js
 - React.js
 - Giphy API
-
-Future updates WIP:
-- Added redux
-- Added backend
-- Improved security
