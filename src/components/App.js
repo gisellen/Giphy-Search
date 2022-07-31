@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
-import SearchField from './SearchField';
+import Main from './Main';
+import Trend from './Trend';
+import Random from './Random'
+import Search from './Search'
 
 export default class App extends Component {
   constructor(props){
@@ -14,10 +17,11 @@ export default class App extends Component {
     <div className="App">
   <div className="container"></div>
 
-  <img src="giphy.gif"/>
-
   <h1> Giphy Search </h1>
-        <SearchField />
+        <Main />
+        <Trend />
+        <Random />
+        <Search />
       </div>
     )
   }

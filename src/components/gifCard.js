@@ -1,14 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class GifCard extends Component {
+export default function gifCard(props) {
 
-    render() {
         return (
-            <div>
-                <img src={this.props.url} alt="gif" width="200" height="auto"/>
+            <div className="gif-container">
+                <img key={props.id} src={props.url} alt="gif" width="100%" height="200px"/>
             </div>
         )
-    }
 }
-
-export default GifCard;
